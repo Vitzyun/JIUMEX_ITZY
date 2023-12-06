@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+/* Contenedor general y reset de margin y padding */
+.expandir * {
+margin: 0;
+padding: 0;
+}
+.expandir {
+font-family:"Comic Sans MS", cursive;
+line-height:normal;
+margin:50px auto 30px;
+height:800px;
+width:1100px;
+}
+/* Las imágenes irán en forma de lista */
+.expandir ul {
+padding-top:20px;
+margin-left:20px;
+}
+/* Se hacen flotar los elementos para que queden en línea y se elimina el estilo que podría haber predefinido para listas */
+.expandir ul li {
+float:left;
+list-style-type:none;
+}
+/* Anulamos estilo predifinido para enlaces en listas */
+.expandir ul li a {
+text-decoration:none;
+}
+/* Estilo de cada imagen en situación inicial y transición suave */
+.expandir ul li a img {
+width:150px; /* Ancho inicial imagénes. 50% real */
+height:150px; /* Alto inicial imagénes. 50% real */
+border:none;
+-webkit-transition: all .3s ease-in;
+-moz-transition: all .3s ease-in;
+-o-transition: all .3s ease-in;
+-ms-transition: all .3s ease-in;
+transition: all .3s ease-in;
+}
+/* El texto que acompaña a las imágenes no se ve inicialmente */
+.expandir ul li a span {
+display:none;
+}
+/* Mostramos el texto al hacer hover */
+.expandir ul li:hover a span {
+display:block;
+font-size:35px;
+text-align:center;
+color:#000;
+}
+/* Agrandamos la imagen al hacer hover */
+.expandir ul li:hover a img {
+width:250px;
+height:250px;
+-webkit-transition: all .3s ease-in-out;
+-moz-transition: all .3s ease-in-out;
+-o-transition: all .3s ease-in-out;
+-ms-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out;
+}
